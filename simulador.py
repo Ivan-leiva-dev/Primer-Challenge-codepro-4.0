@@ -54,7 +54,7 @@ def evaluar_tablero(tablero):
     distancia = abs(tablero["pos_gato"][0] - tablero["pos_raton"][0]) + \
                 abs(tablero["pos_gato"][1] - tablero["pos_raton"][1])
     #el abs significa que no importa si es negatico o positivo, solo nos interesa el valor absoluto
-    return -distancia #-distancia para que el gato minimice la distancia y el raton la maximce
+    return distancia #distancia para que el gato minimice la distancia y el raton la maximce
 
 def minimax(tablero, profundidad, es_turno_gato):
     """el algoritmo minimaz se usa para que l gato y el raton jueguen de manera optima,
@@ -78,7 +78,7 @@ def minimax(tablero, profundidad, es_turno_gato):
                 mejor_valor = valor
                 mejor_movimiento = movimiento
 
-            return mejor_valor, mejor_movimiento
+         return mejor_valor, mejor_movimiento
    #minimiza el raton
     else:
         mejor_valor = float("inf")
